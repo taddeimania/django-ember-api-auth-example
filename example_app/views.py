@@ -1,18 +1,14 @@
 from django.shortcuts import render
-from rest_framework.views import APIView
-from rest_framework.response import Response
-from rest_framework import authentication, permissions
+from rest_framework.generics import ListAPIView
 
+from example_app.models import Secret
+from example_app.serializers import SecretSerializer
 
 
 def index_view(request):
     return render(request, 'index.html')
 
 
-class StupidAPIView(APIView):
-    authentication_classes = (authentication.TokenAuthentication,)
-
-    def get(self, request, format=None):
-        return Response({'message': 'success!'})
-
-
+class SecretListAPIView(ListAPIView):
+    serializer_class = SecretSerializer
+    queryset = Secret.objects.all()

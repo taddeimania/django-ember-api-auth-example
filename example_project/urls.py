@@ -17,10 +17,11 @@ from django.conf.urls import url
 from django.contrib import admin
 from rest_framework.authtoken import views as framework_views
 
-from example_app.views import index_view
+from example_app.views import index_view, SecretListAPIView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^api-token-auth/', framework_views.obtain_auth_token),
     url(r'^$', index_view, name="index_view"),
+    url(r'^api/secrets/$', SecretListAPIView.as_view(), name="secret_list_api_view"),
 ]
