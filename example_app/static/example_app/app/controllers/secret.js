@@ -9,7 +9,9 @@ export default Ember.Controller.extend({
       this.store.createRecord("secret", {
         body: body,
         owner: this.get("session.account")
-      }).save();
+      }).save().then(() => {
+        this.set("newSecretBody", "");
+      });
     }
   }
 });

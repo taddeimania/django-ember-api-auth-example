@@ -13,5 +13,10 @@ export default Ember.Component.extend({
     cancel() {
       this.set("editing", false);
     },
+    remove(secret) {
+      secret.destroyRecord().then(() => {
+        this.set("editing", false);
+      });
+    },
   }
 });

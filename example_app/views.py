@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.contrib.auth.models import User
-from rest_framework.generics import ListCreateAPIView, UpdateAPIView, RetrieveAPIView
+from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView, RetrieveAPIView
 from rest_framework import views
 from rest_framework import parsers
 from rest_framework import renderers
@@ -35,7 +35,7 @@ class SecretListAPIView(ListCreateAPIView):
     queryset = Secret.objects.all()
 
 
-class SecretDetailAPIView(UpdateAPIView):
+class SecretDetailAPIView(RetrieveUpdateDestroyAPIView):
     serializer_class = SecretSerializer
     queryset = Secret.objects.all()
 
