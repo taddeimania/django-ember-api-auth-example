@@ -1,0 +1,21 @@
+<table border="1" style="width: 100%;text-align:center;">
+  <tr>
+    <td>
+      {{link-to "Home" "application"}}
+    </td>
+    <td>
+    {{#unless session.isAuthenticated}}
+      {{link-to "Login" "login"}}
+    {{else}}
+      <a {{action 'invalidateSession'}}>Logout</a>
+    {{/unless}}
+    </td>
+    {{#if session.isAuthenticated}}
+    <td>
+      {{link-to "Secret" "secret"}}
+    </td>
+    {{/if}}
+  </tr>
+</table>
+<h1>Hello World!</h1>
+{{outlet}}
