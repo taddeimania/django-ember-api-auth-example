@@ -5,7 +5,7 @@ from django.dispatch import receiver
 from rest_framework.authtoken.models import Token
 
 
-class Secrets(models.Model):
+class Secret(models.Model):
     owner = models.ForeignKey('auth.user')
     body = models.TextField()
 
