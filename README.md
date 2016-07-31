@@ -46,3 +46,7 @@ Once it finishes it's initial build of your application you can navigate your br
 You should now be able to create a few secrets in the UI.
 
 From here you can begin adding to your application! Have fun!
+
+# Bonus
+
+I livestreamed the initial creation of this project. If you'd like to watch how I built it, [here is the video](https://www.livecoding.tv/taddeimania/videos/Qqj0W-ember-authentication-w-django). It's about 2.5 hours.
