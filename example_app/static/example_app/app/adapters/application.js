@@ -4,4 +4,10 @@ import DataAdapterMixin from 'ember-simple-auth/mixins/data-adapter-mixin';
 
 export default DRFAdapter.extend(DataAdapterMixin, {
   authorizer: 'authorizer:token',
+  shouldReloadAll() {
+    return true;
+  },
+  shouldBackgroundReloadRecord() {
+    return true;
+  },
 });

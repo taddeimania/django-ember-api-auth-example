@@ -17,5 +17,11 @@
     {{/if}}
   </tr>
 </table>
+
 <h1>Hello World!</h1>
+{{#if session.isAuthenticated}}
+Welcome {{session.account.username}}
+{{/if}}
+<br>
+
 {{outlet}}
