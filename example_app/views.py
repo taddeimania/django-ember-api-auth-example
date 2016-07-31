@@ -34,10 +34,16 @@ class SecretListAPIView(ListCreateAPIView):
     serializer_class = SecretSerializer
     queryset = Secret.objects.all()
 
+    def get_queryset(self):
+        return Secret.objects.filter(owner=self.request.user)
+
 
 class SecretDetailAPIView(RetrieveUpdateDestroyAPIView):
     serializer_class = SecretSerializer
     queryset = Secret.objects.all()
+
+    def get_queryset(self):
+        return Secret.objects.filter(owner=self.request.user)
 
 
 class UserDetailAPIView(RetrieveAPIView):
