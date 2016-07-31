@@ -3,3 +3,7 @@
 db.sqlite3
 __pycache__/
 *.pyc
+node_modules/
+bower_components/
+tmp/
+dist/
