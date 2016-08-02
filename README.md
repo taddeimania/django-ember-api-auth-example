@@ -39,6 +39,7 @@ Now you're ready to open a new terminal tab or however you want to start a new p
 
  - Change the current directory to `example_app/static/example_app/`
  - Install your frontend dependencies by running the command `npm install`. This can take a while.
+ - Install your bower dependencies by running the command `bower install`. This should not take a while.
  - Run your frontend watch server to built your `dist` directory by running the command `ember serve`
 
 Once it finishes it's initial build of your application you can navigate your browser to `http://localhost:8000` and login with your superuser credentials.
