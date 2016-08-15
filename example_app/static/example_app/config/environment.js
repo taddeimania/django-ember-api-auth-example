@@ -39,7 +39,8 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.API_URL = 'https://yourdomain.com'; // Replace this with your own deployed domain
+    ENV.APP.API_HOST = 'https://yourdomain.com'; // Replace this with your own deployed domain
   }
   ENV['ember-simple-auth'] = {
     authorizer: 'authorizer:token'
